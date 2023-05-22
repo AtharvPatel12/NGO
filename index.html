@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Document</title>
+
+    <style>
+        .bg {
+            width: 100%;
+            background-image: url("s2.png");
+        }
+        
+        body {
+            background-color: orange;
+            color: whitesmoke;
+        }
+        
+        .button {
+            background-color: deepskyblue;
+            border: none;
+            color: deeppink;
+            padding: 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 200px;
+            cursor: pointer;
+        }
+        
+        .button1 {
+            border-radius: 50%;
+        }
+        
+        .title {
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 9px;
+        }
+        
+        .sejal {
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid royalblue;
+            padding: 50px;
+            margin-left: 1000px;
+            height: 350px;
+        }
+        
+        .sejal2 {
+            background-color: lightgrey;
+            width: 80px;
+            border: 15px solid rosybrown;
+            padding: 50px;
+            margin-left: 950px;
+            height: 50px;
+        }
+        
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid sienna;
+        }
+        
+        td, th {
+            border: 1px solid sienna;
+            text-align: left;
+            padding: 8px;
+            border: 1px solid;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        
+        .se1 {
+            margin-left: 90%;
+        }
+        
+        .se2 {
+            text-align: center;
+            margin-left: 30%;
+            width: 50%;
+        }
+        
+        .se3 {
+            text-align: center;
+            margin-left: 20%;
+        }
+        
+        .se4 {
+            margin-left: 60px; /* Added "px" unit */
+        }
+        
+        .sidebar {
+            width: 100px;
+            height: 100px;
+            background-color: lightseagreen;
+            color: blue;
+            padding-top: 100px;
+            margin-top: 100px;
+            font-family: 'Andika New Basic', sans-serif;
+            border-top-right-radius: 60px;
+            border-bottom-right-radius: 60px;
+            position: fixed;
+            overflow: scroll;
+        }
+        
+        .sidebar:hover {
+            width: 380px;
+            transition-duration: 2s;
+        }
+        
+        .about-me {
+            background-color: orange;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+    
+
+    <script>
+
+function s1() {
+            var var11 = document.getElementById('p1').value;
+            var var12 = document.getElementById('p2').value;
+            var var13 = document.getElementById('p3').value;
+            var z = Number(var11) + Number(var12) + Number(var12);
+            var m = (z / 300) * 100;
+            document.getElementById("p4").value = z;
+            document.getElementById("p6").value = m;
+            if (z > 90 && z <= 100)
+                document.getElementById("p5").value = "A+";
+            else if (z > 80 && z <= 90)
+                document.getElementById("p5").value = "A";
+            else if (z > 70 && z <= 80)
+                document.getElementById("p5").value = "B+";
+            else if (z > 60 && z <= 70)
+                document.getElementById("p5").value = "B+";
+            else if (z > 70 && z <= 60)
+                document.getElementById("p5").value = "B";
+            else if (z > 50 && z <= 60)
+                document.getElementById("p5").value = "C+";
+            else if (z > 40 && z <= 50)
+                document.getElementById("p5").value = "C";
+            else if (z > 33 && z <= 40)
+                document.getElementById("p5").value = "D";
+            else if (z > 0 && z <= 33)
+                document.getElementById("p5").value = "FAIL";
+            else
+                document.getElementById("p5").value = "INVALID";
+        }
+
+        function s2() {
+            var var14 = document.getElementById('q1').value;
+            var var15 = document.getElementById('q2').value;
+            var var16 = document.getElementById('q3').value;
+            var a = Number(var14) + Number(var15) + Number(var16);
+            var o = (a / 300) * 100;
+            document.getElementById("q4").value = a;
+            document.getElementById("q6").value = o;
+            if (a > 90 && a <= 100)
+                document.getElementById("q5").value = "A+";
+            else if (a > 80 && a <= 90)
+                document.getElementById("q5").value = "A";
+            else if (a > 70 && a <= 80)
+                document.getElementById("q5").value = "B+";
+            else if (a > 60 && a <= 70)
+                document.getElementById("q5").value = "B";
+            else if (a > 50 && a <= 60)
+                document.getElementById("q5").value = "C+";
+            else if (a > 40 && a <= 50)
+                document.getElementById("q5").value = "C";
+            else if (a > 33 && a <= 40)
+                document.getElementById("q5").value = "D";
+            else if (a > 0 && a <= 33)
+                document.getElementById("q5").value = "FAIL";
+            else
+                document.getElementById("q5").value = "INVALID";
+        }
+
+        function s3() {
+            var var17 = document.getElementById('r1').value;
+            var var18 = document.getElementById('r2').value;
+            var var19 = document.getElementById('r3').value;
+            var b = Number(var17) + Number(var18) + Number(var19);
+            var p = (b / 300) * 100;
+            document.getElementById("r4").value = b;
+            document.getElementById("r6").value = p;
+            if (b > 90 && b <= 100)
+                document.getElementById("r5").value = "A+";
+            else if (b > 80 && b <= 90)
+                document.getElementById("r5").value = "A";
+            else if (b > 70 && b <= 80)
+                document.getElementById("r5").value = "B+";
+            else if (b > 60 && b <= 70)
+                document.getElementById("r5").value = "B+";
+            else if (b > 70 && b <= 60)
+                document.getElementById("r5").value = "B";
+            else if (b > 50 && b <= 60)
+                document.getElementById("r5").value = "C+";
+            else if (b > 40 && b <= 50)
+                document.getElementById("r5").value = "C";
+            else if (b > 33 && b <= 40)
+                document.getElementById("r5").value = "D";
+            else if (b > 0 && b <= 33)
+                document.getElementById("r5").value = "FAIL";
+            else
+                document.getElementById("r5").value = "INVALID";
+        }
+
+        function s4() {
+            var var20 = document.getElementById('s1').value;
+            var var21 = document.getElementById('s2').value;
+            var var22 = document.getElementById('s3').value;
+            var c = Number(var20) + Number(var21) + Number(var22);
+            var q = (c / 300) * 100;
+            document.getElementById("s4").value = c;
+            document.getElementById("s6").value = q;
+            if (c > 90 && c <= 100)
+                document.getElementById("s5").value = "A+";
+            else if (c > 80 && c <= 90)
+                document.getElementById("s5").value = "A";
+            else if (c > 70 && c <= 80)
+                document.getElementById("s5").value = "B+";
+            else if (c > 60 && c <= 70)
+                document.getElementById("s5").value = "B+";
+            else if (c > 70 && c <= 60)
+                document.getElementById("s5").value = "B";
+            else if (c > 50 && c <= 60)
+                document.getElementById("s5").value = "C+";
+            else if (c > 40 && c <= 50)
+                document.getElementById("s5").value = "C";
+            else if (c > 33 && c <= 40)
+                document.getElementById("s5").value = "D";
+            else if (c > 0 && c <= 33)
+                document.getElementById("s5").value = "FAIL";
+            else
+                document.getElementById("s5").value = "INVALID";
+        }
+
+ function s5() {
+    var var20 = document.getElementById('s1').value;
+    var var21 = document.getElementById('s2').value;
+    var var22 = document.getElementById('s3').value;
+    var c = Number(var20) + Number(var21) + Number(var22);
+    var q = (c / 300) * 100;
+    document.getElementById("s4").value = c;
+    document.getElementById("s6").value = q;
+    if (c > 90 && c <= 100)
+        document.getElementById("s5").value = "A+";
+    else if (c > 80 && c <= 90)
+        document.getElementById("s5").value = "A";
+    else if (c > 70 && c <= 80)
+        document.getElementById("s5").value = "B+";
+    else if (c > 60 && c <= 70)
+        document.getElementById("s5").value = "B";
+    else if (c > 50 && c <= 60)
+        document.getElementById("s5").value = "C+";
+    else if (c > 40 && c <= 50)
+        document.getElementById("s5").value = "C";
+    else if (c > 33 && c <= 40)
+        document.getElementById("s5").value = "D";
+    else if (c > 0 && c <= 33)
+        document.getElementById("s5").value = "FAIL";
+    else
+        document.getElementById("s5").value = "INVALID";
+}
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="bg">
+
+    <!-- <img src="oracle.png" style="width: 30%;padding-top:60%;position: relative;display: inline;margin-left: 20px;margin-top: 40px;"> -->
+
+    <div class="sidebar">
+
+        On the day when we receive our grades,
+        Emotions rise, like ocean waves.
+        A mixture of hope and nervousness,
+        We await the verdict, our academic test.
+        
+        In classrooms filled with whispered prayers,
+        Anxieties mingling in the air.
+        As papers are handed out, heartbeats race,
+        Anticipation etched on each student's face.
+        
+        With trembling hands, we unfold the sheet,
+        Hoping for results that are bittersweet.
+        The moments freeze as our eyes scan,
+        Letters and numbers that define our plan.
+        
+        A symphony of sighs and gasps is heard,
+        As expectations either soar or are shattered.
+        Some eyes light up with joyful glee,
+        While others hide disappointment silently.
+        
+        Grades, like ink upon a fragile page,
+        Capture moments of our scholastic stage.
+        They carry power to lift or to dismay,
+        Guiding paths that we will take each day.
+        
+        Yet, let us remember in this very hour,
+        That grades don't measure our truest power.
+        They are mere markers on a fleeting trail,
+        Not the sole measure of our destined sail.
+        
+        For learning transcends a single grade,
+        It's a journey where growth is made.
+        Our worth lies not in a letter's grip,
+        But in the knowledge we carry, bit by bit.
+        
+        So let us embrace this day of reckoning,
+        Embracing both triumph and reckoning.
+        For in each challenge lies a chance to grow,
+        To reach higher heights and let our spirits glow.
+        
+        On the day when we receive our grades,
+        Let's remember the passion that never fades.
+        For we are more than numbers on a chart,
+        We are dreamers, creators, with fire in our heart.
+        
+
+    </div>
+
+
+
+    <div style="text-align: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:darkblue;font-size: 350%;padding: 5%;"><marquee>Check your marks</marquee></div>
+ <div id="about me">
+    <div class="sejal">
+
+    <div style="text-align: center;font-size: 120%;font-family: Arial, Helvetica, sans-serif;color: blue;font-weight: 100;margin-right: 130%;">NAME:
+
+        <div style="text-align: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: salmon;font-size: 100%;">Atharv Patel</div>
+
+    </div><br>
+
+    <div style="text-align: center;font-size: 120%;font-family: Arial, Helvetica, sans-serif;color: blue;font-weight: 100;margin-right: 130%;">SECTION:
+
+        <div style="text-align: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: salmon;font-size: 100%;padding: 5%;">Alliance</div>
+
+    </div><br>  
+
+    <div style="text-align: center;font-size: 120%;font-family: Arial, Helvetica, sans-serif;color: blue;font-weight: 100;margin-right: 130%;">ROLLNO:
+
+        <div style="text-align: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: salmon;font-size: 100%;padding: 5%;">15</div>
+
+    </div><br>
+
+    <div style="text-align: center;font-size: 120%;font-family: Arial, Helvetica, sans-serif;color: blue;font-weight: 100;margin-right: 130%;">EMAIL:
+
+        <div style="text-align: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: salmon;font-size: 100%;padding: 5%;">s.atharv.patel@fountainheadschools.org
+    </div><br>
+
+    <div style="text-align: center;font-size: 120%;font-family: Arial, Helvetica, sans-serif;color: blue;font-weight: 100;margin-right: 130%;">CONTACT NO:
+
+        <div style="text-align: center;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: salmon;font-size: 100%;padding: 5%;">-</div>
+
+    </div>
+    </div>
+
+</div>
+
+</div>
+
+ 
+
+<table class=".table .td,th .tr" cellspacing="10" cellpadding="10" style="width: 100%;background-color: lightcyan; color: black;">
+
+    <tr>
+
+        <th>SUBJECT</th>
+
+        <th>MID SEM1</th>
+
+        <th>MID SEM 2</th>
+
+        <th>EXAMS</th>
+
+        <th>TOTAL</th>
+
+        <th>GRADE</th>
+
+        <th>PERCENTAGE</th>
+
+    </tr>
+
+    <tr>
+
+        <td>PHYSICS</td>
+
+        <td><input type="text" id="p1"></td>
+
+        <td><input type="text" id="p2"></td>
+
+        <td><input type="text" id="p3" onchange="s1()"></td>
+
+        <td><input type="text" id="p4"></td>
+
+        <td><input type="text" id="p5"></td>
+
+        <td><input type="text" id="p6"></td>
+
+    </tr>
+
+    <tr>
+
+        <td>CHEMISTRY</td>
+
+        <td><input type="text" id="q1"></td>
+
+        <td><input type="text" id="q2"></td>
+
+        <td><input type="text" id="q3" onchange="s2()"></td>
+
+        <td><input type="text" id="q4"></td>
+
+        <td><input type="text" id="q5"></td>
+
+        <td><input type="text" id="q6"></td>
+
+    </tr>
+
+    <tr>
+
+        <td>MATH</td>
+
+        <td><input type="text" id="r1"></td>
+
+        <td><input type="text" id="r2"></td>
+
+        <td><input type="text" id="r3" onchange="s3()"></td>
+
+        <td><input type="text" id="r4"></td>
+
+        <td><input type="text" id="r5"></td>
+
+        <td><input type="text" id="r6"></td>
+
+    </tr>
+
+    <tr>
+
+        <td>HINDI</td>
+
+        <td><input type="text" id="s1"></td>
+
+        <td><input type="text" id="s2"></td>
+
+        <td><input type="text" id="s3" onchange="s4()"></td>
+
+        <td><input type="text" id="s4"></td>
+
+        <td><input type="text" id="s5"></td>
+
+        <td><input type="text" id="s6"></td>
+
+    </tr>
+
+    <tr>
+
+        <td>ENGLISH</td>
+
+        <td><input type="text" id="t1"></td>
+
+        <td><input type="text" id="t2"></td>
+
+        <td><input type="text" id="t3" onchange="s5()"></td>
+
+        <td><input type="text" id="t4"></td>
+
+        <td><input type="text" id="t5"></td>
+
+        <td><input type="text" id="t6"></td>
+
+    </tr>
+
+</table>
+
+</body>
+
+</html>
